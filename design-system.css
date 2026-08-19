@@ -1,0 +1,239 @@
+/* ==========================================================================
+   TAIEVOLUTION — DESIGN SYSTEM
+   Paleta y tipografía ya aprobadas por el proyecto. No modificar sin
+   justificación documentada (ver Prompt Maestro / Sitemap v4).
+   ========================================================================== */
+
+:root {
+  /* Colores de marca */
+  --te-verde: #2B5F4A;
+  --te-verde-oscuro: #1E4335;
+  --te-dorado: #C8933A;
+  --te-dorado-suave: #E3B876;
+  --te-verde-claro: #E8F2EE;
+  --te-blanco: #FFFFFF;
+  --te-gris-texto: #3A3A3A;
+  --te-gris-suave: #6B6B6B;
+  --te-borde: #D9E4DF;
+
+  /* Tipografía */
+  --te-font-display: 'Fraunces', serif;
+  --te-font-body: 'Inter', sans-serif;
+  --te-font-mono: 'IBM Plex Mono', monospace;
+
+  /* Espaciado base (mobile first) */
+  --te-section-y: 4rem;
+  --te-radius: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  :root { --te-section-y: 6.5rem; }
+}
+
+body {
+  font-family: var(--te-font-body);
+  color: var(--te-gris-texto);
+  background-color: var(--te-blanco);
+}
+
+h1, h2, h3, .te-display {
+  font-family: var(--te-font-display);
+  color: var(--te-verde-oscuro);
+  font-weight: 600;
+}
+
+.te-eyebrow {
+  font-family: var(--te-font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--te-dorado);
+}
+
+.te-section {
+  padding-top: var(--te-section-y);
+  padding-bottom: var(--te-section-y);
+}
+
+.te-section--claro {
+  background-color: var(--te-verde-claro);
+}
+
+/* Botones */
+.btn-te-primary {
+  background-color: var(--te-verde);
+  border-color: var(--te-verde);
+  color: var(--te-blanco);
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--te-radius);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.btn-te-primary:hover,
+.btn-te-primary:focus {
+  background-color: var(--te-verde-oscuro);
+  color: var(--te-blanco);
+  transform: translateY(-1px);
+}
+.btn-te-primary:focus-visible {
+  outline: 3px solid var(--te-dorado-suave);
+  outline-offset: 2px;
+}
+
+.btn-te-secondary {
+  background-color: transparent;
+  border: 2px solid var(--te-verde);
+  color: var(--te-verde);
+  font-weight: 600;
+  padding: 0.7rem 1.65rem;
+  border-radius: var(--te-radius);
+  transition: all 0.2s ease;
+}
+.btn-te-secondary:hover,
+.btn-te-secondary:focus {
+  background-color: var(--te-verde);
+  color: var(--te-blanco);
+}
+
+.btn-te-dorado {
+  background-color: var(--te-dorado);
+  border-color: var(--te-dorado);
+  color: var(--te-blanco);
+  font-weight: 600;
+  border-radius: var(--te-radius);
+}
+.btn-te-dorado:hover { background-color: #B37F2E; color: var(--te-blanco); }
+
+/* Navbar */
+.te-navbar {
+  background-color: var(--te-blanco);
+  box-shadow: 0 1px 0 var(--te-borde);
+}
+.te-navbar .nav-link {
+  font-family: var(--te-font-body);
+  font-weight: 500;
+  color: var(--te-gris-texto);
+  margin-inline: 0.35rem;
+}
+.te-navbar .nav-link.active,
+.te-navbar .nav-link:hover {
+  color: var(--te-verde);
+}
+
+/* Imágenes de referencia (stock temporal) — dan una vista profesional
+   del wireframe mientras llega la fotografía real de marca (Chachi).
+   El overlay en verde las integra visualmente a la paleta sin que
+   parezcan fotos genéricas sueltas. SUSTITUIR antes de producción. */
+.te-img-brand {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--te-radius);
+}
+.te-img-brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.9) contrast(1.02);
+}
+.te-img-brand::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(43,95,74,0.05) 0%, rgba(30,67,53,0.35) 100%);
+  pointer-events: none;
+}
+.te-img-brand .te-img-tag {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-family: var(--te-font-mono);
+  font-size: 0.62rem;
+  color: #fff;
+  background: rgba(30,67,53,0.65);
+  padding: 2px 8px;
+  border-radius: 999px;
+  z-index: 2;
+  letter-spacing: 0.03em;
+}
+
+/* Placeholders de imagen — para contenido que SÍ depende de un dato
+   real específico (ej. foto de un testimonio o facilitador concreto)
+   y no debe rellenarse con stock genérico. */
+.te-img-placeholder {
+  background: repeating-linear-gradient(
+    45deg, var(--te-verde-claro), var(--te-verde-claro) 10px,
+    #DCEAE4 10px, #DCEAE4 20px
+  );
+  border: 1px dashed var(--te-verde);
+  color: var(--te-verde-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--te-font-mono);
+  font-size: 0.8rem;
+  padding: 1rem;
+  border-radius: var(--te-radius);
+  min-height: 220px;
+}
+
+/* Contenido provisional marcado explícitamente (LP1/LP2, etc.) */
+.te-provisional {
+  position: relative;
+  border: 2px dashed var(--te-dorado);
+  border-radius: var(--te-radius);
+  padding: 1.25rem;
+  background-color: #FFF9F0;
+}
+.te-provisional::before {
+  content: "CONTENIDO PROVISIONAL — PENDIENTE DE CONFIRMACIÓN";
+  display: block;
+  font-family: var(--te-font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--te-dorado);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* Tarjetas */
+.te-card {
+  border: 1px solid var(--te-borde);
+  border-radius: var(--te-radius);
+  background: var(--te-blanco);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.te-card:hover {
+  box-shadow: 0 8px 24px rgba(43, 95, 74, 0.12);
+  transform: translateY(-2px);
+}
+
+.te-badge-paquete {
+  font-family: var(--te-font-mono);
+  font-size: 0.75rem;
+  background-color: var(--te-verde-claro);
+  color: var(--te-verde-oscuro);
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+/* Footer */
+.te-footer {
+  background-color: var(--te-verde-oscuro);
+  color: var(--te-verde-claro);
+}
+.te-footer a { color: var(--te-verde-claro); }
+.te-footer a:hover { color: var(--te-dorado-suave); }
+
+/* Accesibilidad: reducir movimiento si el usuario lo pide */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* Foco visible consistente en toda la interfaz */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--te-dorado);
+  outline-offset: 2px;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | taievolution — Morelia</title>
+<meta name="description" content="Contáctanos por WhatsApp, teléfono o formulario. Ubicados en Morelia, Michoacán.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+
+<link rel="stylesheet" href="assets/css/design-system.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg te-navbar sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/img/logo-taievolution.png" alt="taievolution" style="height: 48px; width: auto;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link " href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link " href="entrenamientos.html">Entrenamientos</a></li>
+        <li class="nav-item"><a class="nav-link " href="cursos.html">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link " href="facilitadores.html">Facilitadores</a></li>
+        <li class="nav-item"><a class="nav-link " href="galeria.html">Galería</a></li>
+        <li class="nav-item"><a class="nav-link " href="quienes-somos.html">Quiénes somos</a></li>
+        <li class="nav-item"><a class="nav-link " href="casos-de-exito.html">Casos de éxito</a></li>
+        <li class="nav-item"><a class="nav-link " href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <a class="btn btn-te-primary btn-sm w-100" href="entrenamientos.html">Ver entrenamientos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="te-section pb-4 pt-5 text-center">
+  <div class="container">
+    <p class="te-eyebrow mb-2">Contacto</p>
+    <h1 class="te-display display-4 mb-3">¿Tienes dudas?</h1>
+    <p class="fs-5 text-secondary">Escríbenos, con gusto te orientamos.</p>
+  </div>
+</header>
+
+<section class="te-section pt-0">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-6">
+        <div class="te-card p-4 mb-4 text-center">
+          <i class="bi bi-whatsapp fs-1 mb-2 d-block" style="color: #25D366;"></i>
+          <p class="fw-semibold mb-3">La forma más rápida de contactarnos</p>
+          <a href="https://wa.me/524431724242?text=Hola%2C%20tengo%20una%20duda%20y%20prefiero%20escribir%20directamente%20por%20WhatsApp." target="_blank" rel="noopener" class="btn btn-te-primary">Escríbenos por WhatsApp</a>
+        </div>
+
+        <div id="alertaEnvio" class="alert alert-success d-none" role="alert">
+          ¡Gracias! Tu mensaje fue enviado. Te responderemos pronto.
+        </div>
+
+        <form action="https://formsubmit.co/contacto@taievolution.com" method="POST" id="formContacto">
+          <!-- Configuración de FormSubmit: sin backend propio, envía por correo -->
+          <input type="hidden" name="_subject" value="Nuevo contacto desde taievolution.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_next" value="https://taievolution.com/contacto.html?enviado=1">
+          <!-- Honeypot anti-spam (campo oculto que los bots sí llenan) -->
+          <input type="text" name="_honey" style="display:none">
+
+          <div class="mb-3">
+            <label class="form-label small fw-semibold">Nombre</label>
+            <input type="text" name="Nombre" class="form-control" placeholder="Tu nombre" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-semibold">WhatsApp o teléfono</label>
+            <input type="tel" name="Teléfono" class="form-control" placeholder="Tu número" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-semibold">¿En qué te podemos ayudar?</label>
+            <select class="form-select" name="Motivo">
+              <option>Información de entrenamientos</option>
+              <option>Cursos</option>
+              <option>Dudas generales</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-semibold">Mensaje</label>
+            <textarea class="form-control" name="Mensaje" rows="3" placeholder="Cuéntanos brevemente qué necesitas" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-te-primary w-100">Enviar mensaje</button>
+        </form>
+        <p class="small text-secondary mt-2">
+          🔶 Nota técnica: la primera vez que se reciba un mensaje, FormSubmit pedirá confirmar
+          la dirección contacto@taievolution.com por correo para activar el envío. Es un paso único.
+        </p>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="rounded-4 overflow-hidden mb-4" style="height: 260px;">
+          <iframe
+            src="https://www.google.com/maps?q=Perif%C3%A9rico+Independencia+4076%2C+Jardines+de+la+Loma%2C+Morelia%2C+Michoac%C3%A1n&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación taievolution Morelia"></iframe>
+        </div>
+        <ul class="list-unstyled fs-6 d-flex flex-column gap-3">
+          <li><i class="bi bi-geo-alt me-2" style="color: var(--te-verde);"></i>Periférico Independencia 4076, Jardines de la Loma, Morelia, Michoacán</li>
+          <li><i class="bi bi-telephone me-2" style="color: var(--te-verde);"></i>+52 443 172 4242</li>
+          <li><i class="bi bi-envelope me-2" style="color: var(--te-verde);"></i>contacto@taievolution.com</li>
+          <li><i class="bi bi-clock me-2" style="color: var(--te-verde);"></i>🔶 [Horario de atención pendiente de confirmar]</li>
+        </ul>
+        <div class="te-card p-3 mt-4">
+          <p class="small mb-0">¿Tienes una duda común? <a href="faq.html" style="color: var(--te-verde);">Revisa nuestras preguntas frecuentes</a> primero.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="te-footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <p class="te-display h4 text-white">tai<span style="color: var(--te-dorado-suave);">evolution</span></p>
+        <p class="small">Entrenamientos vivenciales de desarrollo personal en Morelia, Michoacán.</p>
+      </div>
+      <div class="col-lg-4">
+        <p class="te-eyebrow text-white-50">Navegación</p>
+        <ul class="list-unstyled small d-flex flex-column gap-2">
+          <li><a href="entrenamientos.html">Entrenamientos</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <p class="te-eyebrow text-white-50">Contacto</p>
+        <ul class="list-unstyled small d-flex flex-column gap-2">
+          <li><i class="bi bi-geo-alt me-2"></i>Periférico Independencia 4076, Jardines de la Loma, Morelia, Mich.</li>
+          <li><i class="bi bi-whatsapp me-2"></i>+52 443 172 4242</li>
+          <li><i class="bi bi-envelope me-2"></i>contacto@taievolution.com</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <div class="d-flex flex-column flex-md-row justify-content-between small">
+      <p class="mb-2 mb-md-0">&copy; 2026 taievolution. Todos los derechos reservados.</p>
+      <a href="aviso-privacidad.html">Aviso de privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/524431724242?text=Hola%2C%20tengo%20una%20duda%20sobre%20taievolution." target="_blank" rel="noopener"
+   class="position-fixed d-flex align-items-center justify-content-center"
+   style="bottom: 24px; right: 24px; width: 56px; height: 56px; border-radius: 50%; background-color: #25D366; color: white; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1030;"
+   aria-label="Escríbenos por WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<a href="tel:+524431724242"
+   class="position-fixed d-flex align-items-center justify-content-center"
+   style="bottom: 90px; right: 24px; width: 48px; height: 48px; border-radius: 50%; background-color: var(--te-verde); color: white; font-size: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1030;"
+   aria-label="Llamar a taievolution">
+  <i class="bi bi-telephone-fill"></i>
+</a>
+
+<button id="btnVolverArriba"
+   class="position-fixed d-none align-items-center justify-content-center"
+   style="bottom: 24px; left: 24px; width: 48px; height: 48px; border-radius: 50%; background-color: var(--te-dorado); color: white; font-size: 1.2rem; border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1030;"
+   aria-label="Volver arriba">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script>
+  const btnTop = document.getElementById('btnVolverArriba');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) { btnTop.classList.remove('d-none'); btnTop.classList.add('d-flex'); }
+    else { btnTop.classList.add('d-none'); btnTop.classList.remove('d-flex'); }
+  });
+  btnTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Mostrar confirmación si venimos de un envío exitoso del formulario (FormSubmit redirige aquí)
+  if (new URLSearchParams(window.location.search).get('enviado') === '1') {
+    document.getElementById('alertaEnvio').classList.remove('d-none');
+    document.getElementById('formContacto').reset();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
